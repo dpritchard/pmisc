@@ -1,9 +1,9 @@
 test_that("We can read tide data...", {
-    expect_silent(td <- read_linz_tides("./test-tides-data/Spit Wharf 2021.csv"))
+    expect_silent(td <- read_linz_tides("./test-tides-files/Spit Wharf 2021.csv"))
     expect_named(td, c("time", "level", "date", "rdt"))
 })
 
-td <- read_linz_tides("./test-tides-data/Spit Wharf 2021.csv")
+td <- read_linz_tides("./test-tides-files/Spit Wharf 2021.csv")
 
 test_that("Tide data has no <NA> levels...", {
     expect_false(any(is.na(td$level)))

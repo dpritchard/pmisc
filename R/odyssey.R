@@ -1,4 +1,6 @@
-# TODO: Include file name in meta
+# TODO: Include file name in meta.
+# TODO: Carry over sensor serial numbers in Cal object.
+# TODO: Warn (with override) if serial numbers don't match.
 
 read_licor <- function(file, cal_col = "INPUT1",
                        date_format = "%Y-%m-%d",

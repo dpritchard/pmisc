@@ -43,7 +43,7 @@ read_odyssey <- function(file,
     tester <- read.csv(file, nrows = 4, header = FALSE)
 
     # TODO: Farm this out to a function, test and enhance it...
-    if(!is.na(is_old)){
+    if(is.na(is_old)){
         is_old <- all(is.na(suppressWarnings(as.numeric(tester[2:4, 1]))))
     }
     #TODO: Add version to the metadata...

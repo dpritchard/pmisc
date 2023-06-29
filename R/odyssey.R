@@ -38,13 +38,14 @@ read_licor <- function(file, cal_col = "INPUT1",
 read_odyssey <- function(file,
                          date_format = "%Y-%m-%d",
                          time_format = "%H:%M:%S",
-                         scan_rate = NULL){
+                         scan_rate = NULL, is_old = NA){
     ## Need to distinguish between old and new file formats...
     tester <- read.csv(file, nrows = 4, header = FALSE)
 
     # TODO: Farm this out to a function, test and enhance it...
-    is_old <- all(is.na(suppressWarnings(as.numeric(tester[2:4, 1]))))
-
+    if(!is.na(is_old)){
+        is_old <- all(is.na(suppressWarnings(as.numeric(tester[2:4, 1]))))
+    }
     #TODO: Add version to the metadata...
     if(is_old) {
         out <- rody_v1(file, date_format, time_format)
@@ -151,7 +152,7 @@ make_odycal <- function(caldat, odydat, intercept = TRUE){
 
 plot.odycal <- function(x, ...) {
     with(na.omit(x$dat),
-         plot(light, value, xlab = "LiCor", ylab = "Odyssey", ...))
+         plot(light, value, ...))
     abline(x$model, lty = 2, col = 4, lwd = 2)
 }
 

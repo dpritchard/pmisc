@@ -9,3 +9,7 @@ export(make_odycal)
 S3method(plot, odycal)
 S3method(print, odycal)
 S3method(predict, odycal)
+
+# Pigments
+export(read_spectro)
+export(ritchie_2008, beer_eshel_1985)

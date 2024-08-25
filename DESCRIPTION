@@ -2,12 +2,13 @@ Package: pmisc
 Title: Miscellaneous Functions by Pritchy
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "Daniel", last = "Pritchard", 
+    person(given = "Daniel", family = "Pritchard", 
            email = "daniel.pritchard@otago.ac.nz", 
            role = c("aut", "cre"), comment = c(ORCID = "0000-0001-8335-5971"))
 Description: A package to keep Pritchy sane. Now including tides and calibraiton 
     support for Odyssey data loggers.
 License: MIT + file LICENSE
+Imports: xml2
 Encoding: UTF-8
 Suggests: 
     testthat (>= 3.0.0)

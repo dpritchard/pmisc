@@ -3,7 +3,7 @@ Title: Miscellaneous Functions by Pritchy
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Daniel", family = "Pritchard", 
-           email = "daniel.pritchard@otago.ac.nz", 
+           email = "daniel@tmk.nz", 
            role = c("aut", "cre"), comment = c(ORCID = "0000-0001-8335-5971"))
 Description: A package to keep Pritchy sane. Now including tides and calibraiton 
     support for Odyssey data loggers.

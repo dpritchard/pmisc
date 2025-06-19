@@ -7,7 +7,7 @@ Function to read data files from Odyssey PAR loggers.
 This function reads TXT files produced by an LI-1500, handheld 3-channel light logger.
 }
 \usage{
-read_licor(file, cal_col = "INPUT1", date_format = "\%Y-\%m-\%d", time_format = "\%H:\%M:\%S")
+read_licor(file, cal_col = "INPUT1", date_format = "\%Y-\%m-\%d", time_format = "\%H:\%M:\%S", utc_offset = NA)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -15,6 +15,7 @@ read_licor(file, cal_col = "INPUT1", date_format = "\%Y-\%m-\%d", time_format = 
   \item{cal_col}{The column in the file to be preserved as calibration data.}
   \item{date_format}{Date format, compatible with \code{\link{strptime}} used for reading files.}
   \item{time_format}{Time format, compatible with \code{\link{strptime}} used for reading files.}
+  \item{utc_offset}{An offset to convert the date / times values back to UTC. Must be supplied. See \code{\link{read_odyssey}} for a discussion.}
 }
 \details{
 TODO: Describe data formats, with tables, if nessecary.

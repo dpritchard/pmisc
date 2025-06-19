@@ -3,6 +3,7 @@ export(interpolate_tides)
 export(read_linz_tides)
 
 export(read_licor)
+export(read_miniPAR)
 export(read_odyssey)
 export(make_odycal)
 
